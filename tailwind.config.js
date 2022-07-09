@@ -7,19 +7,19 @@ module.exports = {
   ],
   theme: {
     screens: {
-      xs: { min: "0px", max: "639px" },
-      sm: { min: "640px", max: "767px" },
+      xs: { min: "0px", max: "425px" },
+      sm: { min: "425px", max: "767px" },
       md: { min: "768px", max: "1023px" },
       lg: { min: "1024px", max: "1279px" },
       xl: { min: "1280px" },
     },
     extend: {
       colors: {
-        primary: colors.cyan[600],
+        primary: "#08fdd8",
         secondary: colors.rose[800],
         neutral: colors.gray,
-        primaryText: colors.black,
-        secondaryText: colors.gray[400],
+        primaryText: colors.white,
+        secondaryText: "#909096",
       },
     },
   },
