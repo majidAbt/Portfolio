@@ -5,8 +5,9 @@ function Contact() {
   const title = "Contact\u00A0Me!";
   const desc =
     "I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.";
+  const email = "majid.abt98@gmail.com"
   return (
-    <div className="h-full text-primaryText grid grid-cols-2 gap-2">
+    <div className="h-full text-primaryText grid xl:grid-cols-2 gap-2">
       <div className="flex-col self-center justify-center pl-8 relative md:col-span-full">
         <AnimatedText text={title} />
         <div className="relative">
@@ -16,7 +17,7 @@ function Contact() {
           <form
             className="grid grid-cols-2 gap-4"
             method="POST"
-            action="mailto: majid.abt98@gmail.com"
+            action={`mailto: ${email}`}
             encType="multipart/form-data"
           >
             <input
