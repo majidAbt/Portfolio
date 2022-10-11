@@ -20,7 +20,10 @@ module.exports = {
         neutral: colors.gray,
         primaryText: colors.white,
         secondaryText: "#909096",
+        paper: "#1d1d1d"
+
       },
+
     },
   },
   plugins: [],
