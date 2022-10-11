@@ -8,9 +8,10 @@ export default function SkillsCanvas() {
   return (
     <div className={styles.scene}>
       <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
-      <fog attach="fog" args={['#202025', 0, 80]} />
-      <Cloud count={20} radius={21} />
-      <TrackballControls />
-    </Canvas>
-  </div>
-)}
+        <fog attach="fog" args={['#202025', 0, 80]} />
+        <Cloud count={20} radius={21} />
+        <TrackballControls />
+      </Canvas>
+    </div>
+  )
+}
