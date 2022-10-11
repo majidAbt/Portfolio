@@ -1,5 +1,8 @@
 .container {
-  color: red;
+  position: relative;
+}
+.containerIner {
+  position: relative;
 }
 
 .container::before {
