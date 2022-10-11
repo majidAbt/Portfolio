@@ -1,0 +1,13 @@
+.enterAnimate {
+  position: relative;
+  animation: ease animateleft 0.2s;
+}
+
+@keyframes animateleft {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
