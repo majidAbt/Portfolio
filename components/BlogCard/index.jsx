@@ -1,29 +1,35 @@
 import Avatar from "./../../public/assets/icons/avatar.svg";
 import Image from "next/image";
+import styles from "./BlogCard.module.css"
+import Github from "../../public/assets/icons/Github";
+import BlogTitle from "../BlogTitle";
 
-
-const BlogCard = ({ imgSrc, title, desc, author, date }) => {
+const BlogCard = ({ imgSrc, title, desc, author, date, titleColor, borderColor, shortDesc }) => {
   return (
     <>
-      <div className=" w-full lg:max-w-full lg:flex">
-        <div style={{ backgroundImage: `url(${imgSrc})` }} className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" title="Mountain">
-        </div>
-        <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-          <div className="mb-8">
-            <div className="text-gray-900 font-bold text-xl mb-2">{title}</div>
-            <p className="text-gray-700 text-base">{desc}</p>
+      <div className={styles.container}>
+        <div className={styles.card}>
+          <div className={`${styles.slide} ${styles.slide1} `}>
+            <div className={`${styles.content}`}>
+              <BlogTitle title={title} titleColor={titleColor} borderColor={borderColor} desc={shortDesc} />
+            </div>
           </div>
-          <div className="flex items-center">
-            <div className="flex align-center text-sm h-[45px] gap-3">
 
-              <Image className="rounded-full mr-4" src={Avatar} width="30" height="15" alt="Avatar of Writer" />
-              <div className="flex flex-col gap-0.5 self-end">
-                <p className="text-gray-900 leading-none">{author}</p>
-                <p className="text-gray-600">{date}</p>
-              </div>
+          <div className={`${styles.slide} ${styles.slide2} `}>
+            <div className={styles.content}>
+              <h3 className="text-white">
+                {title}
+              </h3>
+              <p>{desc}</p>
+              <p style={{ marginTop: "3rem", color: "lightblue" }} className="mt-4 text-[primary] cursor-pointer ">
+                Read More
+              </p>
             </div>
           </div>
         </div>
+
+
+
       </div>
 
     </>

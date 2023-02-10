@@ -7,18 +7,18 @@ import SplashScreen from "../components/SplashScreen";
 
 function MyApp({ Component, pageProps }) {
   const [showChild, setShowChild] = useState(false);
-  const [isLoading, setLoading] = useState(true)
+  const [isLoading, setLoading] = useState(false)
   const { pathname } = useRouter()
 
   useEffect(() => {
     setShowChild(true);
   }, []);
 
-  useEffect(() => {
-    setLoading(true)
-    setTimeout(() => setLoading(false), 1800);
+  // useEffect(() => {
+  //   setLoading(true)
+  //   setTimeout(() => setLoading(false), 1800);
 
-  }, [pathname]);
+  // }, [pathname]);
 
   if (!showChild) {
     return null;
@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {isLoading ? <SplashScreen /> : <Layout>
-        <div className="py-8 sm:px-2 px-4 flex items-center min-h-screen h-full">
+        <div className=" sm:px-2 px-4 flex items-center h-full w-full">
           <Component {...pageProps} />
         </div>
       </Layout>}

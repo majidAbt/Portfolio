@@ -14,7 +14,7 @@ export default function Cloud({ radius = 20, count = 20 }) {
     { label: "HTML", phi: 1.9, theta: 2 },
     { label: "Python", phi: 3, theta: 3 },
     { label: "Javascript", phi: 8, theta: 4.5 },
-    { label: "Tailwind CSS", phi: 3, theta: 5 },
+    { label: "Tailwind CSS", phi: 2, theta: 6.5 },
     { label: "Redux", phi: 4, theta: 6 },
     { label: "Next js", phi: 5, theta: 6.5 },
     { label: "Material UI", phi: 5, theta: 8 },
@@ -26,8 +26,8 @@ export default function Cloud({ radius = 20, count = 20 }) {
     { label: "Cypress", phi: 7.8, theta: 7.5 },
     { label: "Jest", phi: 6, theta: 7 },
     { label: "Story Book", phi: 4.6, theta: 6.5 },
-    { label: "Bootstrap", phi: 7, theta: 8 },
-    { label: "BS4", phi: 5, theta: 10 },
+    { label: "Bootstrap", phi: 8, theta: 7 },
+    { label: "BS4", phi: 5, theta: 9 },
     { label: "ES6", phi: 4, theta: 3 },
   ]
 

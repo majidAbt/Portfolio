@@ -10,7 +10,7 @@ export default function Layout({ children }) {
       <div
         className={` md:ml-[140px] lg:ml-[140px] xl:ml-[140px] bg-[#1d1d1d] relative ${styles.container}`}
       >
-        <div className={`p-4 h-full static relative ${styles.containerIner}`}>
+        <div className={`p-4 h-full relative ${styles.containerIner} w-full`}>
           {children}
         </div>
       </div>

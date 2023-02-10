@@ -20,8 +20,13 @@ module.exports = {
         neutral: colors.gray,
         primaryText: colors.white,
         secondaryText: "#909096",
-        paper: "#1d1d1d"
-
+        paper: "#1d1d1d",
+        darkblue: colors.blue[900],
+        darkred: colors.red[900],
+        darkyellow: colors.yellow[900],
+        darkorange: colors.orange[900],
+        darkgreen: colors.green[900],
+        darkpurple: colors.purple[900]
       },
 
     },

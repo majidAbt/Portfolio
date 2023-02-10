@@ -1,8 +1,13 @@
 .container {
   position: relative;
+  min-height: 100vh;
+
 }
 .containerIner {
   position: relative;
+  min-height: 100vh;
+  display:flex;
+  align-items: center;
 }
 
 .container::before {
@@ -11,7 +16,7 @@
   color: #515152;
   font-size: 14px;
   position: absolute;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   margin-left: 0.5rem;
 }
 .container::after {
@@ -30,8 +35,9 @@
   color: #515152;
   font-size: 14px;
   position: absolute;
-  margin-top: 0.5rem;
+  margin-top: 2.5rem;
   margin-left: 1rem;
+  top:0
 }
 .containerIner::after {
   content: "</body>";
