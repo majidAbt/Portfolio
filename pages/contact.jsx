@@ -1,13 +1,21 @@
 import AnimatedText from "../components/AnimatedText";
 import styles from "./Contact.module.css";
-import Map from "../components/GoogleMap";
+import { Suspense } from "react";
+import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
+import dynamic from "next/dynamic";
+
 function Contact() {
   const title = "Contact\u00A0Me!";
   const desc =
     "I’m interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to use the form.";
   const email = "majid.abt98@gmail.com"
+
+  const DynamicGoogleMap = dynamic(() => import('../components/GoogleMap'), {
+    suspense: true,
+  })
+
   return (
-    <div className="h-full text-primaryText grid xl:grid-cols-2 gap-2">
+    <div className="h-full text-primaryText grid xl:grid-cols-2 gap-2 overflow-hidden">
       <div className="flex-col self-center justify-center pl-8 relative md:col-span-full">
         <AnimatedText text={title} />
         <div className="relative">
@@ -54,10 +62,9 @@ function Contact() {
           </form>
         </div>
       </div>
-
-      <h1 className="text-primry md:col-span-full">
-        <Map />
-      </h1>
+      <Suspense fallback={<div className="flex justify-center align-center py-16"><LoadingSpinner /></div>}>
+    <DynamicGoogleMap />
+    </Suspense>
     </div>
   );
 }

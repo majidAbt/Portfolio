@@ -2,7 +2,8 @@ import AnimatedText from "../components/AnimatedText";
 import styles from "./About.module.css";
 import Lottie from 'react-lottie';
 import animationData from '../public/assets/lotties/laptop.json';
-import ArrowDown from "../public/assets/icons/ArrowDown";
+import ScrollDownText from "../components/ScrollDownText";
+import SoundClouadIframe from "../components/SoundClouadIframe";
 
 function Landing() {
   const name = "Hi,\u00A0I\u00A0am\u00A0Majid";
@@ -20,8 +21,8 @@ function Landing() {
 
   return (
     <>
-      <div className="min-h-screen h-full text-primaryText grid xl:grid-cols-4 gap-2 min-screen-full">
-        <div className="flex-col self-center justify-center relative col-span-2 self-end">
+      <div className="min-h-screen h-full text-primaryText grid sm:grid-cols-2 xl:grid-cols-4 gap-2 min-screen-full mt-24">
+        <div className="flex-col self-center justify-center relative sm:col-span-4 xl:col-span-2 self-end">
           <AnimatedText text={name} />
           <p className={`text-textPrimary ${styles.paragraph}`}>
             {desc}
@@ -30,19 +31,15 @@ function Landing() {
             </p>
           </p>
         </div>
-        <div className="col-span-2 h-[400px] m-auto ">
+        <div className="sm:col-span-4  md:col-span-2  xl:col-span-2 lg:col-span-2 h-[400px] m-auto ">
           <Lottie options={defaultOptions} height={400}
             width={400} />
         </div>
-        <div className="col-span-4 text-center flex justify-center items-end  p-4">
-          <div className="flex gap-1 animate-bounce items-center">
-            <p className="self-end hover:text-primary cursor-pointer p-2 " ><a href="#section2" className="scroll-smooth">More details Scroll down </a></p>
-            <ArrowDown className=" color-primary" />
-          </div>
-        </div>
+      <ScrollDownText/>
       </div>
       <div id="section2" className="min-h-screen text-primaryText grid xl:grid-cols-4 gap-2 min-screen-full scroll-smooth">s
       </div>
+      <SoundClouadIframe />
     </>
   );
 }
